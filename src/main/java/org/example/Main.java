@@ -18,6 +18,9 @@ public class Main {
                     case 2:
                         exercise2();
                         break;
+                    case 3:
+                        exercise3();
+                        break;
                     default:
                         break;
                 }
@@ -28,6 +31,32 @@ public class Main {
             }
         }
     }
+    public static void exercise3(){
+        System.out.println("Creating a program that takes two numbers and calculates their sum/sub/mul/div.");
+        System.out.println();
+        var scan = new Scanner(System.in);
+        System.out.println("Enter first number: ");
+        try{
+            double num1 = scan.nextDouble();
+            System.out.println("Enter second number: ");
+            try{
+                double num2 = scan.nextDouble();
+                System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+                System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+                System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
+                System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
+            }
+            catch(Exception e){
+                System.out.println("Bad second number, closing this.");
+                System.exit(0);
+            }
+        }
+        catch(Exception e){
+            System.out.println("Bad first number, closing program");
+            System.exit(0);
+        }
+    }
+
     public static void exercise2(){
         System.out.println("Creating a program that take a year from user and checks if its a leap year or not.");
         System.out.println();

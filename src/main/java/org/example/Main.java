@@ -30,6 +30,9 @@ public class Main {
                     case 6:
                         exercise6();
                         break;
+                    case 7:
+                        exercise7();
+                        break;
                     default:
                         break;
                 }
@@ -40,6 +43,24 @@ public class Main {
             }
         }
     }
+    public static void exercise7(){
+        System.out.println("Converting seconds into hours minutes and seconds.");
+        System.out.println();
+        var scan = new Scanner(System.in);
+        System.out.println("Enter number for (whole) seconds to convert: ");
+        try{
+            int secondsInput = scan.nextInt();
+            int hours = secondsInput / (60 * 60);
+            int minutes = (secondsInput - (hours * (60 * 60))) / 60;
+            int seconds = secondsInput - (hours * (60 * 60)) - (minutes * 60);
+            System.out.println(hours + ":" + minutes + ":" + seconds);
+        }
+        catch(Exception e){
+            System.out.println("not valid number, closing");
+            System.exit(0);
+        }
+    }
+
     public static void exercise6(){
         System.out.println("Creating a program that takes two numbers and calculates their sum/sub/mul/div.");
         System.out.println();

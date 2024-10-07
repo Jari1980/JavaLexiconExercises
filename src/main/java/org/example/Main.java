@@ -7,6 +7,7 @@ public class Main {
         var scan = new Scanner(System.in);
         int num;
         while (true) {
+            System.out.println();
             System.out.println("Which exercise do you want to see, 1-8 :");
             try {
                 num = scan.nextInt();
@@ -25,5 +26,10 @@ public class Main {
         }
     }
 
-    public static void exercise1(){}
+    public static void exercise1(){
+        System.out.println("Creating a program that prints 'Hello' in first line and my name on the second.");
+        System.out.println();
+        System.out.println("Hello");
+        System.out.println("Jari!");
+    }
 }

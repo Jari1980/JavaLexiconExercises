@@ -21,6 +21,9 @@ public class Main {
                     case 3:
                         exercise3();
                         break;
+                    case 4:
+                        exercise4();
+                        break;
                     default:
                         break;
                 }
@@ -31,6 +34,37 @@ public class Main {
             }
         }
     }
+    public static void exercise4(){
+        System.out.println("Writing a program that prints the average of three numbers.");
+        System.out.println();
+        var scan = new Scanner(System.in);
+        System.out.println("Enter first number: ");
+        try{
+            double num1 = scan.nextDouble();
+            System.out.println("Enter second number: ");
+            try{
+                double num2 = scan.nextDouble();
+                System.out.println("Enter third number: ");
+                try{
+                    double num3 = scan.nextDouble();
+                    System.out.println("(" + num1 + " + " + num2 + " + " + num3 + ")/" + "3" + "=" + (num1 + num2 + num3) / 3);
+                }
+                catch(Exception e){
+                    System.out.println("Bad third number, closing");
+                    System.exit(0);
+                }
+            }
+            catch(Exception e){
+                System.out.println("Bad second number, closing");
+                System.exit(0);
+            }
+        }
+        catch(Exception e){
+            System.out.println("Bad first number, closing");
+            System.exit(0);
+        }
+    }
+
     public static void exercise3(){
         System.out.println("Creating a program that takes two numbers and calculates their sum/sub/mul/div.");
         System.out.println();

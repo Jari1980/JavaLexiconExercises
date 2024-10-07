@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -33,6 +34,9 @@ public class Main {
                     case 7:
                         exercise7();
                         break;
+                    case 8:
+                        exercise8();
+                        break;
                     default:
                         break;
                 }
@@ -43,6 +47,34 @@ public class Main {
             }
         }
     }
+    public static void exercise8(){
+        System.out.println("Creating a random number and letting user guess value.");
+        System.out.println();
+        var rand = new Random();
+        var scan = new Scanner(System.in);
+        int randomNum = rand.nextInt(0,501);
+        System.out.println("Guess the random number between 0-500:");
+        while(true){
+            try{
+                int num = scan.nextInt();
+                if (num == randomNum){
+                    System.out.println("Great guess!");
+                    break;
+                }
+                else if(num > randomNum){
+                    System.out.println("You guessed too high, guess again:");
+                }
+                else{
+                    System.out.println("You gessed too low, guess again:");
+                }
+            }
+            catch(Exception e){
+                System.out.println("Bad guess, closing");
+                System.exit(0);
+            }
+        }
+    }
+
     public static void exercise7(){
         System.out.println("Converting seconds into hours minutes and seconds.");
         System.out.println();

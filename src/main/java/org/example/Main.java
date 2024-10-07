@@ -27,6 +27,9 @@ public class Main {
                     case 5:
                         exercise5();
                         break;
+                    case 6:
+                        exercise6();
+                        break;
                     default:
                         break;
                 }
@@ -37,6 +40,32 @@ public class Main {
             }
         }
     }
+    public static void exercise6(){
+        System.out.println("Creating a program that takes two numbers and calculates their sum/sub/mul/div.");
+        System.out.println();
+        var scan = new Scanner(System.in);
+        System.out.println("Enter first number: ");
+        try{
+            double num1 = scan.nextDouble();
+            System.out.println("Enter second number: ");
+            try{
+                double num2 = scan.nextDouble();
+                System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+                System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+                System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
+                System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
+            }
+            catch(Exception e){
+                System.out.println("Bad second number, closing this.");
+                System.exit(0);
+            }
+        }
+        catch(Exception e){
+            System.out.println("Bad first number, closing program");
+            System.exit(0);
+        }
+    }
+
     public static void exercise5(){
         System.out.println("Asking user for his/her name, saving it in local variable then greeting user with his/her name.");
         System.out.println();
@@ -78,29 +107,12 @@ public class Main {
     }
 
     public static void exercise3(){
-        System.out.println("Creating a program that takes two numbers and calculates their sum/sub/mul/div.");
+        System.out.println("Creating a program that calculates the sum/mul/div/sub of two numbers");
         System.out.println();
-        var scan = new Scanner(System.in);
-        System.out.println("Enter first number: ");
-        try{
-            double num1 = scan.nextDouble();
-            System.out.println("Enter second number: ");
-            try{
-                double num2 = scan.nextDouble();
-                System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
-                System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
-                System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
-                System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
-            }
-            catch(Exception e){
-                System.out.println("Bad second number, closing this.");
-                System.exit(0);
-            }
-        }
-        catch(Exception e){
-            System.out.println("Bad first number, closing program");
-            System.exit(0);
-        }
+        System.out.println("45 + 11 = " + (45 + 11));
+        System.out.println("12 * 4 = " + (12 * 4));
+        System.out.println("24 / 6 = " + (24 / 6));
+        System.out.println("55 - 12 = " + (55 - 12));
     }
 
     public static void exercise2(){

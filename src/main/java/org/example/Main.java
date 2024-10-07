@@ -24,6 +24,9 @@ public class Main {
                     case 4:
                         exercise4();
                         break;
+                    case 5:
+                        exercise5();
+                        break;
                     default:
                         break;
                 }
@@ -34,6 +37,15 @@ public class Main {
             }
         }
     }
+    public static void exercise5(){
+        System.out.println("Asking user for his/her name, saving it in local variable then greeting user with his/her name.");
+        System.out.println();
+        var scan = new Scanner(System.in);
+        System.out.println("Please enter your name:");
+        String name = scan.nextLine();
+        System.out.println("Hello " + name);
+    }
+
     public static void exercise4(){
         System.out.println("Writing a program that prints the average of three numbers.");
         System.out.println();
